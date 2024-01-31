@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Greta Sans, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse farthest-corner, #800080 0%, #000 90%);
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  width: 1120px;
+  height: 500px;
+  transition: all 400ms;
+}
+
+.container:hover .box {
+  filter: grayscale(100%) opacity(24%)
+}
+
+.box {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background: var(--img) center center;
+  background-size: cover;
+  transition: all 400ms;
+}
+
+.container .box:hover {
+  filter:grayscale(0%) opacity(100%);
+}
+
+.container:has(.box-1:hover) {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-2:hover) {
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-3:hover) {
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-4:hover) {
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-5:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
+}
+
+.container:has(.box-6:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
+}
+
+.container:has(.box-7:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
+}
+
+.box:nth-child(old) {
+  transform:translateY(-16px);
+}
+
+.box:nth-child(even) {
+  transform:translateY(16px);
+}
+
+.box::after {
+  padding: 10px 10px 14px 10px;
+  content:attr(data-text);
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  transition: all 400ms;
+  opacity: 0;
+}
+
+.box:hover::after {
+  transform: translateY(0);
+  transition: all 400ms;
+  opacity: 0;
+}
+
+.header-text {
+  color: #000;
+  letter-spacing: 4px;
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 54px;
+}
+
+.box__name {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  opacity: 0;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.box__name-text {
+  align-self: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+}
+
+.box:hover .box__name {
+  opacity: 100%;
+}
