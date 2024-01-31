@@ -7,6 +7,8 @@
 
 Вариант анимации карточек с помощью HTML и CSS.
 
+Изучаю, тренируюсь...
+
 ---
 **Стек технологий**
 
@@ -18,6 +20,8 @@
 
 
 Option of animating cards with HTML and CSS.
+
+Study, train...
 
 ---
 **Technology stack**

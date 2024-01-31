@@ -22,11 +22,11 @@ body {
   transition: all 400ms;
 }
 
-.container:hover .box {
-  filter: grayscale(100%) opacity(24%)
+.container:hover .card {
+  filter: grayscale(100%) opacity(16%)
 }
 
-.box {
+.card {
   display: flex;
   position: relative;
   justify-content: center;
@@ -36,61 +36,58 @@ body {
   transition: all 400ms;
 }
 
-.container .box:hover {
+.container .card:hover {
   filter:grayscale(0%) opacity(100%);
 }
 
-.container:has(.box-1:hover) {
+.container:has(.card-1:hover) {
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.container:has(.box-2:hover) {
+.container:has(.card-2:hover) {
   grid-template-columns: 1fr 3fr 1fr 1fr 1fr 1fr 1fr;
 }
 
-.container:has(.box-3:hover) {
+.container:has(.card-3:hover) {
   grid-template-columns: 1fr 1fr 3fr 1fr 1fr 1fr 1fr;
 }
 
-.container:has(.box-4:hover) {
+.container:has(.card-4:hover) {
   grid-template-columns: 1fr 1fr 1fr 3fr 1fr 1fr 1fr;
 }
 
-.container:has(.box-5:hover) {
+.container:has(.card-5:hover) {
   grid-template-columns: 1fr 1fr 1fr 1fr 3fr 1fr 1fr;
 }
 
-.container:has(.box-6:hover) {
+.container:has(.card-6:hover) {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 3fr 1fr;
 }
 
-.container:has(.box-7:hover) {
+.container:has(.card-7:hover) {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 3fr;
 }
 
-.box:nth-child(old) {
+.card:nth-child(old) {
   transform:translateY(-16px);
 }
 
-.box:nth-child(even) {
+.card:nth-child(even) {
   transform:translateY(16px);
 }
 
-.box::after {
+.card::after {
   padding: 10px 10px 14px 10px;
   content:attr(data-text);
   position: absolute;
   bottom: 20px;
   background: #000;
-  color: #fff;
-  letter-spacing: 4px;
-  text-transform: uppercase;
   transform: translateY(60px);
   transition: all 400ms;
   opacity: 0;
 }
 
-.box:hover::after {
+.card:hover::after {
   transform: translateY(0);
   transition: all 400ms;
   opacity: 0;
@@ -104,7 +101,7 @@ body {
   font-size: 54px;
 }
 
-.box__name {
+.card__name {
   display: flex;
   position: absolute;
   bottom: 20px;
@@ -116,13 +113,13 @@ body {
   justify-content: center;
 }
 
-.box__name-text {
+.card__name-text {
   align-self: center;
   font-weight: bold;
   color: #fff;
   font-size: 20px;
 }
 
-.box:hover .box__name {
+.card:hover .card__name {
   opacity: 100%;
 }
