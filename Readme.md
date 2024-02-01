@@ -9,6 +9,8 @@
 
 Изучаю, тренируюсь...
 
+_P.S.: Нажми на картинку, чтобы посмотреть видео._
+
 ---
 **Стек технологий**
 
@@ -22,6 +24,8 @@
 Option of animating cards with HTML and CSS.
 
 Study, train...
+
+_P.S.: Click on the picture to see the video._
 
 ---
 **Technology stack**
